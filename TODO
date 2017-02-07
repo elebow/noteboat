@@ -1,0 +1,6 @@
+Next/previous/rand buttons. Maybe just rand on the index page.
+use before_first_request to load file names into memory?
+syntax highlighting
+show file mtimes. Allow sorts in index
+note folders. set metadata line in file, so note structure doesn't have to follow real structure, and allow easy editing.
+jump to same position when toggling edit mode on and off

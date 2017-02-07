@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Noteboat</title>
+		<link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+		<link rel="stylesheet" type=text/css href="{{ url_for('static', filename='style.css') }}">
+		<meta name='viewport' content='width=device-width, initial-scale=1'>
+	</head>
+	<body>
+		{% for message in get_flashed_messages() %}
+			<div class=flash>{{ message }}</div>
+		{% endfor %}
+		{% block body %}{% endblock %}
+	</body>
+</html>
+

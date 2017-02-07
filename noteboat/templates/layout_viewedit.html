@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="controls">
+	<a href="{{ url_for('notes_index') }}">index</a>
+	|
+	{% if request.endpoint == 'note_show' %}
+		<a href="{{ url_for('note_edit', name=note_name) }}">edit</a>
+		<div class="floating-edit-button">
+			<a href="{{ url_for('note_edit', name=note_name) }}">edit</a>
+		</div>
+	{% else %}
+		<a href="{{ url_for('note_show', name=note_name) }}">view</a>
+	{% endif %}
+	|
+	<a href="{{ url_for('note_edit', name=note_name) }}">prev</a>
+	<a href="{{ url_for('note_edit', name=note_name) }}">next</a>
+</div>
+<div class="note-title">
+	{{ note_name }}
+</div>
+{% block note_content %}
+{% endblock %}
+{% endblock %}
+

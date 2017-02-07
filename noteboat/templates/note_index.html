@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul class="note-index">
+	{% for note_info in notes_info %}
+		<li>
+			<a href="{{ url_for('note_show', name=note_info['name']) }}">{{ note_info['title'] }}</a>
+			{{ note_info['desc'] }} <div class="note-filename">{{ note_info['name'] }}</div>
+		</li>
+	{% endfor %}
+</ul>
+
+<form action="{{ url_for('note_create') }}" method="get">
+	<input name="note_name" type="text">
+	<input type="submit" value="create new note">
+</form>
+{% endblock %}
+

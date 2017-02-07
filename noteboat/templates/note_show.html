@@ -1,0 +1,9 @@
+{% extends "layout_viewedit.html" %}
+{% block note_content %}
+<div>
+	{% for line in note_text.splitlines() %}
+		<p>{{line}}</p>
+	{% endfor %}
+</div>
+{% endblock %}
+

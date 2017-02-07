@@ -1,0 +1,45 @@
+body {
+	color: #2222cf;
+	font-size: 14px;
+	height: 100vh;
+	margin: auto;
+	max-width: 800px;
+	line-height: 1.5;
+}
+
+a {
+	color: #a12e2e;
+}
+
+@media (min-width: 600px) {
+	.note-index {
+		columns: 2;
+	}
+}
+
+.note-title {
+	display: inline;
+	font-size: 1.5em;
+}
+
+.note-filename {
+	display: inline;
+	font-size: 0.75em;
+	font-style: italic;
+}
+
+.floating-edit-button {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+form {
+	display: inline;
+}
+
+textarea {
+	width: 98%;
+	height: 99%;
+}
+
