@@ -1,7 +1,7 @@
 import os
 
-from . import config
-from .note import Note
+from noteboat import config
+from noteboat.note import Note
 
 
 class Notes:

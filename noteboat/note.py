@@ -1,6 +1,6 @@
 import os
 
-from . import config
+from noteboat import config
 
 
 class Note:

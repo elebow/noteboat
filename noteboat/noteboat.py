@@ -2,7 +2,7 @@ from flask import Flask, redirect, render_template, request, url_for
 import os
 import os.path
 
-from .notes import Notes
+from noteboat.notes import Notes
 
 app = Flask(__name__)
 # app.debug = True
