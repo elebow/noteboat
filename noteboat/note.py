@@ -1,4 +1,5 @@
 import os
+import re
 
 from noteboat import config
 
@@ -25,10 +26,10 @@ class Note:
 		return self.title or "[no title]"
 
 	def get_sortable_title(self):
-		title = self.get_title()
-		if title.startswith("The "):
-			title = title[len("The "):]
-		return title.lower()
+		sortable_title = self.get_title().lower()
+		sortable_title = re.sub(r"^\W+", "", sortable_title)
+		sortable_title = re.sub(r"^the ", "", sortable_title, re.IGNORECASE)
+		return sortable_title
 
 	def write(self):
 		path = self.temp_path()
