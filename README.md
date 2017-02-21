@@ -12,9 +12,18 @@ Noteboat is a lightweight, web-based note viewer and editor that uses my existin
 
 Noteboat was designed with a Unixy philosophy and complies with the 12-factor app philosophy as much as practical for such a tiny tool. Access control is left to the web server or WSGI middleware (I rely on a VPN for auth); backup is covered by the regular backup of my homedir; notes are stored in plain text form and easily read by humans or other tools.
 
-Usage
+Setup
 =====
 
 To configure, simply set environment variables (perhaps with the supported `.env` file) `NOTEBOAT_NOTE_FILE_BASE`, `NOTEBOAT_SAVED_FILE_BASE`, and `NOTEBOAT_FILE_EXTENSION`. The app can be run in any WSGI container.
 
-You have a lot of flexibility in how you want to compartmentalize your notes directory. I use linux's "bind mount" facility to expose the directory to the web server safely.
+You have a lot of flexibility in how you want to compartmentalize your notes directory. I use linux's "bind mount" facility to expose the directory to the app safely.
+
+Usage
+=====
+
+The first two lines of every file are assumed to be the title and description, respectively. They are displayed on the index page. Behavior is undefined for files shorter than two lines.
+
+Create new files with the form at the bottom of the index page. The text field is for the file name.
+
+There is no way to delete files through the interface, to guard against accidental removal.
