@@ -2,7 +2,7 @@
 {% block note_content %}
 <form action="{{ url_for('note_write', name=note_name) }}" method="POST">
 	<input type="submit" value="write">
-<textarea name="note_text">
+<textarea name="note_text" id="note_text">
 {% for line in note_text.splitlines() %}
 {{- line}}
 {% endfor %}
