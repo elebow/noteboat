@@ -22,7 +22,7 @@ You have a lot of flexibility in how you want to compartmentalize your notes dir
 Usage
 =====
 
-The first two lines of every file are assumed to be the title and description, respectively. They are displayed on the index page. Behavior is undefined for files shorter than two lines.
+The first two lines of every file are assumed to be the title and description, respectively. They are displayed on the index page. Behavior is undefined for files shorter than two lines. They can be blank.
 
 Create new files with the form at the bottom of the index page. The text field is for the file name.
 
